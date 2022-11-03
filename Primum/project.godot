@@ -9,193 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "GraphNode",
-"class": "ASM_GN",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/ASM_GN.gd"
-}, {
-"base": "GraphEdit",
-"class": "ASM_GraphEdit",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/ASM_GraphEdit.gd"
-}, {
 "base": "Control",
-"class": "Chart",
+"class": "Building",
 "language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/chart.gd"
-}, {
-"base": "Node2D",
-"class": "Chart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/chart2d.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "ColumnChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/ColumnChart/column_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "ColumnChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/ColumnChart2D/column_chart2D.gd"
-}, {
-"base": "Reference",
-"class": "Compiler",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/Compiler.gd"
-}, {
-"base": "Control",
-"class": "ConnectionManager",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/ConnectionManager.gd"
-}, {
-"base": "Reference",
-"class": "CustomStateMachine",
-"language": "GDScript",
-"path": "res://addons/ASM/compiled/CustomStateMachine.gd"
-}, {
-"base": "Resource",
-"class": "DataFrame",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/data_frame.gd"
-}, {
-"base": "PanelContainer",
-"class": "DataTooltip",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/containers/data_tooltip/data_tooltip.gd"
-}, {
-"base": "Control",
-"class": "GraphController",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/GraphController.gd"
-}, {
-"base": "Panel",
-"class": "JSONViewer",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/JSON_Viewer.gd"
-}, {
-"base": "VBoxContainer",
-"class": "LegendElement",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/containers/legend/function_legend.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "LineChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/LineChart/line_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "LineChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/LineChart2D/line_chart2D.gd"
-}, {
-"base": "Resource",
-"class": "Matrix",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/matrix.gd"
-}, {
-"base": "Reference",
-"class": "MatrixGenerator",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/matrix_generator.gd"
-}, {
-"base": "Chart",
-"class": "PieChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/PieChart/pie_chart.gd"
-}, {
-"base": "Control",
-"class": "Point",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/components/point/point.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "RadarChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/RadarChart/radar_chart.gd"
-}, {
-"base": "Reference",
-"class": "RegexCompiler",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/RegexCompiler.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "ScatterChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/ScatterChart/scatter_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "ScatterChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/ScatterChart2D/scatter_chart2D.gd"
-}, {
-"base": "Spatial",
-"class": "ScatterChart3D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/3d_charts/ScatterChart3D/scatter_chart3D.gd"
-}, {
-"base": "Chart",
-"class": "ScatterChartBase",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/scatter_chart_base.gd"
-}, {
-"base": "Reference",
-"class": "ScriptManager",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/ScriptManager.gd"
-}, {
-"base": "Reference",
-"class": "Slice",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/components/slice/slice.gd"
-}, {
-"base": "Resource",
-"class": "State",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/Resources/State.gd"
-}, {
-"base": "Reference",
-"class": "StateMachine",
-"language": "GDScript",
-"path": "res://addons/ASM/scr/StateMachine.gd"
+"path": "res://building.gd"
 } ]
 _global_script_class_icons={
-"ASM_GN": "",
-"ASM_GraphEdit": "",
-"Chart": "",
-"Chart2D": "",
-"ColumnChart": "",
-"ColumnChart2D": "",
-"Compiler": "",
-"ConnectionManager": "",
-"CustomStateMachine": "",
-"DataFrame": "",
-"DataTooltip": "",
-"GraphController": "",
-"JSONViewer": "",
-"LegendElement": "",
-"LineChart": "",
-"LineChart2D": "",
-"Matrix": "",
-"MatrixGenerator": "",
-"PieChart": "",
-"Point": "",
-"RadarChart": "",
-"RegexCompiler": "",
-"ScatterChart": "",
-"ScatterChart2D": "",
-"ScatterChart3D": "",
-"ScatterChartBase": "",
-"ScriptManager": "",
-"Slice": "",
-"State": "",
-"StateMachine": ""
+"Building": ""
 }
 
 [application]
 
 config/name="Primum - Lunar City"
-run/main_scene="res://main.tscn"
+run/main_scene="res://main_graph.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -212,7 +38,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/easy_charts/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gui]
 

@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="Output" type="GraphNode"]
+margin_left = 436.0
+margin_top = 185.0
+margin_right = 714.0
+margin_bottom = 401.0
+mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 262.0
+margin_bottom = 38.0
+text = "output"

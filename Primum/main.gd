@@ -29,7 +29,7 @@ func _ready():
 
 
 func _on_Button_pressed():
-	var tree = $"CanvasLayer/Tree"
+	var tree = $"CanvasLayer/World/Tree"
 	tree.set_column_title(0, "Day")
 	tree.set_column_title(1, "Oxygen Consumed")
 	var root = tree.create_item()
