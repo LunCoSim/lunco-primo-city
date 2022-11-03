@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="GraphNode" type="GraphNode"]
+margin_left = 253.0
+margin_top = 182.0
+margin_right = 511.0
+margin_bottom = 334.0
+mouse_filter = 1
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 25.0
+margin_right = -16.0
+margin_bottom = 55.0

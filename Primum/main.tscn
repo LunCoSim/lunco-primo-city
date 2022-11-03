@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+
+[node name="Tree" type="Tree" parent="CanvasLayer"]
+margin_left = 436.5
+margin_top = 300.5
+margin_right = 959.5
+margin_bottom = 542.5
+columns = 11
+column_titles_visible = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_right = 947.0
+margin_bottom = 544.0
+
+[node name="World" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 193.5
+margin_top = 92.0
+margin_right = -1726.5
+margin_bottom = -988.0
+
+[node name="LivingBuilding" type="Node2D" parent="CanvasLayer/World"]
+position = Vector2( 85, -5 )
+
+[node name="PowerPlant" type="Control" parent="CanvasLayer/World"]
+margin_left = 335.5
+margin_top = 145.5
+margin_right = 595.5
+margin_bottom = 186.5
+
+[node name="Shape" type="Polygon2D" parent="CanvasLayer/World/PowerPlant"]
+position = Vector2( 8, 24 )
+color = Color( 0.027451, 0.333333, 0.341176, 0.45098 )
+polygon = PoolVector2Array( 5, -37.0963, 249, -40.1032, 249, 28.0527, 5, 29 )
+
+[node name="Inputs" type="Node" parent="CanvasLayer/World/PowerPlant"]
+
+[node name="Outputs" type="Node" parent="CanvasLayer/World/PowerPlant"]
+
+[node name="Label" type="Label" parent="CanvasLayer/World/PowerPlant"]
+margin_left = 85.0
+margin_top = 11.0
+margin_right = 160.0
+margin_bottom = 25.0
+text = "Power Plant"
+
+[node name="WaterBuilding" type="Node2D" parent="CanvasLayer/World"]
+position = Vector2( -66, -38 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+margin_left = -223.0
+margin_top = -162.0
+margin_right = 353.0
+margin_bottom = -118.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+margin_top = 15.0
+margin_right = 125.0
+margin_bottom = 29.0
+text = "asdasdasdasdasdad"
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 129.0
+margin_right = 199.0
+margin_bottom = 44.0
+text = "Calculate"
+
+[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 203.0
+margin_right = 260.0
+margin_bottom = 44.0
+text = "Scale +"
+
+[connection signal="gui_input" from="CanvasLayer/Control" to="." method="_on_Control_gui_input"]
+[connection signal="gui_input" from="CanvasLayer/World" to="." method="_on_World_gui_input"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]

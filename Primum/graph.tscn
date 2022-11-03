@@ -1,0 +1,29 @@
+[gd_scene format=2]
+
+[node name="GraphNode" type="GraphNode"]
+margin_right = 193.0
+margin_bottom = 110.0
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 177.0
+margin_bottom = 24.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 16.0
+margin_top = 25.0
+margin_right = 177.0
+margin_bottom = 25.0
