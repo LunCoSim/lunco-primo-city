@@ -71,4 +71,13 @@ func _on_Control_gui_input(event):
 			$"CanvasLayer/World".rect_position += e.relative
 		else:
 			pass
+	elif event is InputEventPanGesture:
+		var e = event as InputEventPanGesture
+		var length = e.delta.y/10
+		$"CanvasLayer".scale = $"CanvasLayer".scale+Vector2(length, length)
+#
+#
+#		print(e.delta)
+	else:
+		print(event)
 		
