@@ -13,9 +13,33 @@ _global_script_classes=[ {
 "class": "Building",
 "language": "GDScript",
 "path": "res://building.gd"
+}, {
+"base": "Resource",
+"class": "GraphData",
+"language": "GDScript",
+"path": "res://componens/res/GraphData.gd"
+}, {
+"base": "GraphNode",
+"class": "InputNode",
+"language": "GDScript",
+"path": "res://componens/script/Input.gd"
+}, {
+"base": "Resource",
+"class": "NodeData",
+"language": "GDScript",
+"path": "res://componens/res/NodeData.gd"
+}, {
+"base": "GraphNode",
+"class": "OutputNode",
+"language": "GDScript",
+"path": "res://componens/script/Output.gd"
 } ]
 _global_script_class_icons={
-"Building": ""
+"Building": "",
+"GraphData": "",
+"InputNode": "",
+"NodeData": "",
+"OutputNode": ""
 }
 
 [application]

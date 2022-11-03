@@ -9,6 +9,8 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 40.0
+right_disconnects = true
+scroll_offset = Vector2( 0, -400 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -16,23 +18,32 @@ margin_top = 40.0
 anchor_right = 1.0
 margin_bottom = 40.0
 
-[node name="MenuButton" type="MenuButton" parent="CanvasLayer/HBoxContainer"]
-margin_right = 48.0
+[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_right = 41.0
 margin_bottom = 40.0
-text = "Menu"
-items = [ "Save", null, 0, false, false, 0, 0, null, "", false, "Load", null, 0, false, false, 1, 0, null, "", false ]
+text = "Save"
+
+[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer"]
+margin_left = 45.0
+margin_right = 87.0
+margin_bottom = 40.0
+text = "Load"
 
 [node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 52.0
-margin_right = 126.0
+margin_left = 91.0
+margin_right = 165.0
 margin_bottom = 40.0
 text = "Add input"
 
 [node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 130.0
-margin_right = 187.0
+margin_left = 169.0
+margin_right = 226.0
 margin_bottom = 40.0
 text = "Output"
 
+[connection signal="connection_request" from="GraphEdit" to="." method="_on_GraphEdit_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_GraphEdit_disconnection_request"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button3" to="." method="save"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button4" to="." method="load"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_add_output_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
