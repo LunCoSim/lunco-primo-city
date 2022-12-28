@@ -10,40 +10,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 40.0
 right_disconnects = true
-scroll_offset = Vector2( 0, -400 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="Menu" type="HBoxContainer" parent="CanvasLayer"]
 anchor_right = 1.0
 margin_bottom = 40.0
 
-[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/Menu"]
 margin_right = 41.0
 margin_bottom = 40.0
 text = "Save"
 
-[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer"]
+[node name="Button4" type="Button" parent="CanvasLayer/Menu"]
 margin_left = 45.0
 margin_right = 87.0
 margin_bottom = 40.0
 text = "Load"
 
-[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 91.0
-margin_right = 165.0
-margin_bottom = 40.0
+[node name="Facilities" type="VBoxContainer" parent="CanvasLayer"]
+margin_left = 6.0
+margin_top = 179.0
+margin_right = 80.0
+margin_bottom = 223.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Facilities"]
+margin_right = 74.0
+margin_bottom = 20.0
 text = "Add input"
 
-[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer"]
-margin_left = 169.0
-margin_right = 226.0
-margin_bottom = 40.0
+[node name="Button2" type="Button" parent="CanvasLayer/Facilities"]
+margin_top = 24.0
+margin_right = 74.0
+margin_bottom = 44.0
 text = "Output"
+
+[node name="Time" type="HBoxContainer" parent="CanvasLayer"]
+margin_left = 274.0
+margin_right = 359.0
+margin_bottom = 40.0
+
+[node name="Start" type="Button" parent="CanvasLayer/Time"]
+margin_right = 41.0
+margin_bottom = 40.0
+text = "Start"
+
+[node name="Stop" type="Button" parent="CanvasLayer/Time"]
+margin_left = 45.0
+margin_right = 85.0
+margin_bottom = 40.0
+text = "Stop"
+
+[node name="Time" type="Label" parent="CanvasLayer/Time"]
+margin_left = 89.0
+margin_top = 13.0
+margin_right = 89.0
+margin_bottom = 27.0
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_GraphEdit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="." method="_on_GraphEdit_disconnection_request"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button3" to="." method="save"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button4" to="." method="load"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_add_output_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Button3" to="." method="save"]
+[connection signal="pressed" from="CanvasLayer/Menu/Button4" to="." method="load"]
+[connection signal="pressed" from="CanvasLayer/Facilities/Button" to="." method="_on_add_output_pressed"]
+[connection signal="pressed" from="CanvasLayer/Facilities/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Time/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Time/Stop" to="." method="_on_Stop_pressed"]

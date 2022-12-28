@@ -12,20 +12,31 @@ const OutputNode = preload("res://componens/Output.tscn")
 
 const FileToSave = "user://graph.res"
 
+var Steps: int = 0
+var IsRunning: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	update_steps_label()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if IsRunning:
+		Steps += 1
+		update_steps_label()
+	
+	
+
+#---------------
 
 func add_node(node_class):
 	var node = node_class.instance()
 	graph_edit.add_child(node)
 
-
+func update_steps_label():
+	$CanvasLayer/Time/Time.text = str(Steps)
+	
 #---------------
 #UI integration
 	
@@ -42,6 +53,14 @@ func _on_GraphEdit_connection_request(from, from_slot, to, to_slot):
 func _on_GraphEdit_disconnection_request(from, from_slot, to, to_slot):
 	graph_edit.disconnect_node(from, from_slot, to, to_slot)
 
+
+func _on_Start_pressed():
+	IsRunning = true
+
+
+func _on_Stop_pressed():
+	IsRunning = false
+	
 #-----
 func alert(val):
 	print(val)
@@ -109,3 +128,27 @@ func clear_graph():
 	for node in nodes:
 		if node is GraphNode:
 			node.queue_free()
+
+
+func get_connected(connections, node, port):
+	var res = null
+	for conn in connections:
+		if (conn["to"] == node.name) and (conn["to_port"]==port):
+			return conn
+	return res
+	
+func _on_do_step():
+	var connections = graph_edit.get_connection_list()
+	
+	for node in graph_edit.get_children():
+		if node is GraphNode:
+			if node.Type == "InputNode":
+				pass
+			elif node.Type == "OutputNode":
+				for port in node.get_connection_input_count():
+					print(port)
+					var conn = get_connected(connections, node, port)
+					print(conn)
+					if conn:
+						var src = graph_edit.get_node(conn["from"])
+						print(src.get_node("LineEdit").text)
