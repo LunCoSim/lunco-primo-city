@@ -1,7 +1,5 @@
-extends GraphNode
-class_name GNode
+extends ConfirmationDialog
 
-signal edit_node_name(node)
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,14 +10,12 @@ signal edit_node_name(node)
 func _ready():
 	pass # Replace with function body.
 
-
+func set_input_data(data):
+	$LineEdit.text = str(data)
+	
+func get_input_data():
+	return $LineEdit.text
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func _on_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.doubleclick:
-			print(event.position)
-			self.emit_signal("edit_node_name", self)
-	pass # Replace with function body.

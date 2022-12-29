@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://main_graph.gd" type="Script" id=1]
+[ext_resource path="res://dialogs/InputDialog.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
@@ -67,6 +68,8 @@ margin_top = 13.0
 margin_right = 89.0
 margin_bottom = 27.0
 
+[node name="InputDialog" parent="CanvasLayer" instance=ExtResource( 2 )]
+
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_GraphEdit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="." method="_on_GraphEdit_disconnection_request"]
 [connection signal="pressed" from="CanvasLayer/Menu/Button3" to="." method="save"]
@@ -75,3 +78,5 @@ margin_bottom = 27.0
 [connection signal="pressed" from="CanvasLayer/Facilities/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Time/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Time/Stop" to="." method="_on_Stop_pressed"]
+[connection signal="confirmed" from="CanvasLayer/InputDialog" to="." method="_on_InputDialog_confirmed"]
+[connection signal="popup_hide" from="CanvasLayer/InputDialog" to="." method="_on_InputDialog_popup_hide"]

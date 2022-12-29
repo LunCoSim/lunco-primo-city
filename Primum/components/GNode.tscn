@@ -20,3 +20,5 @@ margin_top = 24.0
 margin_right = 189.0
 margin_bottom = 38.0
 text = "Testing lavel"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

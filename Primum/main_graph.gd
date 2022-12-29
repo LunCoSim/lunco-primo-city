@@ -15,6 +15,8 @@ const FileToSave = "user://graph.res"
 var Steps: int = 0
 var IsRunning: bool = false
 
+var _node = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_steps_label()
@@ -32,6 +34,9 @@ func _process(delta):
 
 func add_node(node_class):
 	var node = node_class.instance()
+	
+	node.connect("edit_node_name", self, "_on_edit_node_name")
+	
 	graph_edit.add_child(node)
 
 func update_steps_label():
@@ -152,3 +157,18 @@ func _on_do_step():
 					if conn:
 						var src = graph_edit.get_node(conn["from"])
 						print(src.get_node("LineEdit").text)
+
+func _on_edit_node_name(node):
+	print("_on_edit_node_name", node)
+	_node = node
+	$CanvasLayer/InputDialog.set_input_data(node.title)
+	$CanvasLayer/InputDialog.popup_centered()
+
+
+func _on_InputDialog_confirmed():
+	_node.title = $CanvasLayer/InputDialog.get_input_data()
+	_node = null
+
+func _on_InputDialog_popup_hide():
+#	_node = null
+	pass

@@ -81,3 +81,5 @@ func _on_Control_gui_input(event):
 	else:
 		print(event)
 		
+func on_edit_node_name(node):
+	$"CanvasLayer2/InputDialog".popup_centered()
