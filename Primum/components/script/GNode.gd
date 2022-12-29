@@ -1,11 +1,11 @@
 extends GraphNode
-class_name InputNode
+class_name GNode
+
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-const Type = "InputNode"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
