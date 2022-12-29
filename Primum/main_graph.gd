@@ -7,8 +7,8 @@ extends Node
 
 onready var graph_edit = $"GraphEdit"
 
-const InputNode = preload("res://componens/Input.tscn")
-const OutputNode = preload("res://componens/Output.tscn")
+const InputNode = preload("res://components/Input.tscn")
+const OutputNode = preload("res://components/Output.tscn")
 
 const FileToSave = "user://graph.res"
 

@@ -1,4 +1,4 @@
-extends GraphNode
+extends GNode
 class_name OutputNode
 
 # Declare member variables here. Examples:

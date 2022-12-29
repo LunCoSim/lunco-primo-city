@@ -34,7 +34,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://components/res/NodeData.gd"
 }, {
-"base": "GraphNode",
+"base": "GNode",
 "class": "OutputNode",
 "language": "GDScript",
 "path": "res://components/script/Output.gd"

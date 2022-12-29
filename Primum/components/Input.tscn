@@ -24,5 +24,3 @@ margin_top = 39.0
 margin_right = 172.0
 margin_bottom = 63.0
 text = "input"
-
-[connection signal="gui_input" from="." to="." method="_on_Input_gui_input"]

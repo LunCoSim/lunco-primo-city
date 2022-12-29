@@ -15,3 +15,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _on_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.doubleclick:
+			print(event.position)
+			
+	pass # Replace with function body.
