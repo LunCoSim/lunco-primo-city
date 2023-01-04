@@ -9,6 +9,13 @@ onready var graph_edit = $"GraphEdit"
 
 const InputNode = preload("res://components/Input.tscn")
 const OutputNode = preload("res://components/Output.tscn")
+const HumanNode = preload("res://components/Human.tscn")
+
+var Entities := [
+	InputNode,
+	OutputNode,
+	HumanNode
+]
 
 const FileToSave = "user://graph.res"
 
@@ -20,15 +27,25 @@ var _node = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_steps_label()
-
+	
+	var facilities = $CanvasLayer/Facilities
+	
+	
+	for entity in Entities:
+		var e = entity as PackedScene
+		var btn = Button.new()
+		btn.text = e.resource_path
+		
+		facilities.add_child(btn)
+		btn.connect("pressed", self, "add_node", [e])
+		
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if IsRunning:
 		Steps += 1
 		update_steps_label()
-	
-	
 
 #---------------
 

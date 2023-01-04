@@ -35,16 +35,10 @@ margin_top = 179.0
 margin_right = 80.0
 margin_bottom = 223.0
 
-[node name="Button" type="Button" parent="CanvasLayer/Facilities"]
-margin_right = 74.0
-margin_bottom = 20.0
-text = "Add input"
-
-[node name="Button2" type="Button" parent="CanvasLayer/Facilities"]
-margin_top = 24.0
-margin_right = 74.0
-margin_bottom = 44.0
-text = "Output"
+[node name="Label" type="Label" parent="CanvasLayer/Facilities"]
+margin_right = 92.0
+margin_bottom = 14.0
+text = "List of entities"
 
 [node name="Time" type="HBoxContainer" parent="CanvasLayer"]
 margin_left = 274.0
@@ -74,8 +68,6 @@ margin_bottom = 27.0
 [connection signal="disconnection_request" from="GraphEdit" to="." method="_on_GraphEdit_disconnection_request"]
 [connection signal="pressed" from="CanvasLayer/Menu/Button3" to="." method="save"]
 [connection signal="pressed" from="CanvasLayer/Menu/Button4" to="." method="load"]
-[connection signal="pressed" from="CanvasLayer/Facilities/Button" to="." method="_on_add_output_pressed"]
-[connection signal="pressed" from="CanvasLayer/Facilities/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Time/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Time/Stop" to="." method="_on_Stop_pressed"]
 [connection signal="confirmed" from="CanvasLayer/InputDialog" to="." method="_on_InputDialog_confirmed"]

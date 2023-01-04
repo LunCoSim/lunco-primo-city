@@ -1,10 +1,6 @@
-extends Node2D
+extends Node
 
-export var Population := 10000
 
-signal calculation_finished
-
-onready var lblPopulation = $"../Canvas/Label"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -18,9 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-#-------
-
-func do_calculate():
-	print("do_calculate")
-	emit_signal("calculation_finished")

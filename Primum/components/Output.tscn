@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://components/GNode.tscn" type="PackedScene" id=1]
-[ext_resource path="res://components/script/Output.gd" type="Script" id=2]
+[ext_resource path="res://core/GNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/Output.gd" type="Script" id=2]
 
 [node name="Output" instance=ExtResource( 1 )]
 margin_left = 436.0
@@ -12,8 +12,5 @@ mouse_filter = 1
 slot/0/left_enabled = true
 script = ExtResource( 2 )
 
-[node name="Label1" parent="." index="1"]
-margin_top = 39.0
+[node name="Label" parent="." index="0"]
 margin_right = 262.0
-margin_bottom = 53.0
-text = "output"

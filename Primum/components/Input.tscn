@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://components/script/Input.gd" type="Script" id=1]
-[ext_resource path="res://components/GNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://components/Input.gd" type="Script" id=1]
+[ext_resource path="res://core/GNode.tscn" type="PackedScene" id=2]
 
 [node name="Input" instance=ExtResource( 2 )]
 margin_right = 188.0

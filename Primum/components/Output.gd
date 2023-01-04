@@ -1,7 +1,5 @@
-extends GraphNode
-class_name GNode
-
-signal edit_node_name(node)
+extends GNode
+class_name OutputNode
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,14 +10,14 @@ signal edit_node_name(node)
 func _ready():
 	pass # Replace with function body.
 
+#--------------------
+#according to https://victorkarp.com/godot-engine-how-to-get-the-class-name-of-a-custom-class/
+func get_class():
+	return "OutputNode"
+
+func is_class(value):
+	return value == "OutputNode"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func _on_gui_input(event):
-	if event is InputEventMouseButton:
-		if event.doubleclick:
-			print(event.position)
-			self.emit_signal("edit_node_name", self)
-	pass # Replace with function body.
