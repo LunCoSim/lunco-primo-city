@@ -61,12 +61,6 @@ func update_steps_label():
 	
 #---------------
 #UI integration
-	
-func _on_add_output_pressed():
-	add_node(InputNode)
-
-func _on_Button2_pressed():
-	add_node(OutputNode)
 
 
 func _on_GraphEdit_connection_request(from, from_slot, to, to_slot):
@@ -102,7 +96,7 @@ func save_data(file_name):
 		if node is GraphNode:
 			var node_data = NodeData.new()
 			node_data.name = node.name
-			node_data.type = node.Type
+			node_data.type = node.get_class()
 			node_data.offset = node.offset
 #			node_data.data = node.data
 			graph_data.nodes.append(node_data)
@@ -136,10 +130,15 @@ func init_graph(graph_data: GraphData):
 				gnode = InputNode.instance()
 			"OutputNode":
 				gnode = OutputNode.instance()
-				
-		gnode.offset = node.offset
-		gnode.name = node.name
-		graph_edit.add_child(gnode)
+			"HumanNode":
+				gnode = HumanNode.instance()
+		
+		if gnode:
+			gnode.offset = node.offset
+			gnode.name = node.name
+			graph_edit.add_child(gnode)
+		else:
+			print("Gnode not found: ", node.type)
 		
 	for con in graph_data.connections:
 		var _e = graph_edit.connect_node(con.from, con.from_port, con.to, con.to_port)

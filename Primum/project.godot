@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://core/res/GraphData.gd"
 }, {
 "base": "GNode",
+"class": "HumanNode",
+"language": "GDScript",
+"path": "res://components/Human.gd"
+}, {
+"base": "GNode",
 "class": "InputNode",
 "language": "GDScript",
 "path": "res://components/Input.gd"
@@ -43,6 +48,7 @@ _global_script_class_icons={
 "Building": "",
 "GNode": "",
 "GraphData": "",
+"HumanNode": "",
 "InputNode": "",
 "NodeData": "",
 "OutputNode": ""
