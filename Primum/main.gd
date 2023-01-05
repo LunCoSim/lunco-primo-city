@@ -13,6 +13,8 @@ export var StepSizeDays := 1
 #https://www.cnet.com/science/breathe-deep-how-the-iss-keeps-astronauts-alive/
 export var OxygenConsumption = 0.84 #kg/person/day
 
+var paused = true
+
 #----------
 
 var OxygenConsumed = 0
@@ -20,32 +22,34 @@ var OxygenConsumed = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-
-func _on_Button_pressed():
-	var tree = $"UiLayer/Tree"
+	init_output_table()
+	
+func init_output_table():
+	var tree = $"UiLayer/TableOutput"
 	tree.set_column_title(0, "Day")
 	tree.set_column_title(1, "Oxygen Consumed")
 	var root = tree.create_item()
 
-	tree.set_hide_root(true)
+	tree.set_hide_root(true)	
 	
-	
-	for i in range(Steps):
-		OxygenConsumed += Population*StepSizeDays*OxygenConsumption
-			
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if not paused:
+		var tree = $"UiLayer/TableOutput"
+		var root = tree.get_root()
+		
+		OxygenConsumed += Population*StepSizeDays*OxygenConsumption*(delta/1000)
+		
 		var child = tree.create_item(root)
 
-		child.set_text(0, str(i*StepSizeDays))
+		child.set_text(0, str((delta/1000)*StepSizeDays))
 		child.set_text(1, str(OxygenConsumed))
-		
-	
+
+
+func _on_Button_pressed():
+	paused = not paused
 
 
 func _on_Button2_pressed():

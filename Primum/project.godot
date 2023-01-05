@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "Building",
 "language": "GDScript",
-"path": "res://building.gd"
+"path": "res://core/building.gd"
 }, {
 "base": "GraphNode",
 "class": "GNode",
@@ -48,6 +48,11 @@ _global_script_classes=[ {
 "class": "OutputNode",
 "language": "GDScript",
 "path": "res://Graph_Based/components/Output.gd"
+}, {
+"base": "Building",
+"class": "SpacePort",
+"language": "GDScript",
+"path": "res://buildings/SpacePort.gd"
 } ]
 _global_script_class_icons={
 "Building": "",
@@ -57,7 +62,8 @@ _global_script_class_icons={
 "InputNode": "",
 "LivingModule": "",
 "NodeData": "",
-"OutputNode": ""
+"OutputNode": "",
+"SpacePort": ""
 }
 
 [application]

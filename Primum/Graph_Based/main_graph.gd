@@ -30,7 +30,7 @@ var _node = null
 func _ready():
 	update_steps_label()
 	
-	var facilities = $GameLayer/Facilities
+	var facilities = $/Facilities
 	
 	
 	for entity in Entities:
@@ -59,7 +59,7 @@ func add_node(node_class):
 	graph_edit.add_child(node)
 
 func update_steps_label():
-	$GameLayer/Time/Time.text = str(Steps)
+	$/Time/Time.text = str(Steps)
 	
 #---------------
 #UI integration
@@ -181,12 +181,12 @@ func _on_do_step():
 func _on_edit_node_name(node):
 	print("_on_edit_node_name", node)
 	_node = node
-	$GameLayer/InputDialog.set_input_data(node.title)
-	$GameLayer/InputDialog.popup_centered()
+	$/InputDialog.set_input_data(node.title)
+	$/InputDialog.popup_centered()
 
 
 func _on_InputDialog_confirmed():
-	_node.title = $GameLayer/InputDialog.get_input_data()
+	_node.title = $/InputDialog.get_input_data()
 	_node = null
 
 func _on_InputDialog_popup_hide():

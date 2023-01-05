@@ -1,3 +1,4 @@
+tool
 extends Control
 class_name Building
 
@@ -7,10 +8,18 @@ export var Out = []
 # var a = 2
 # var b = "text"
 
+export var type := "Building"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print('ready')
+		
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	$Label.set_text(type)
+	
+
+#-------------------------------
 
 func draw_circle_arc(center, radius, angle_from, angle_to, color):
 	var nb_points = 32
@@ -22,16 +31,3 @@ func draw_circle_arc(center, radius, angle_from, angle_to, color):
 
 	for index_point in range(nb_points):
 		draw_line(points_arc[index_point], points_arc[index_point + 1], color)
-		
-func _draw():
-#	._draw()
-	var center = Vector2(200, 200)
-	var radius = 80
-	var angle_from = 75
-	var angle_to = 195
-	var color = Color(1.0, 0.0, 0.0)
-	draw_circle_arc(center, radius, angle_from, angle_to, color)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
