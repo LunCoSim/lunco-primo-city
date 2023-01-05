@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "GraphData",
 "language": "GDScript",
-"path": "res://core/res/GraphData.gd"
+"path": "res://core/data/GraphData.gd"
 }, {
 "base": "GNode",
 "class": "HumanNode",
@@ -34,10 +34,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://components/Input.gd"
 }, {
+"base": "GraphNode",
+"class": "LivingModule",
+"language": "GDScript",
+"path": "res://components/LivingModule.gd"
+}, {
 "base": "Resource",
 "class": "NodeData",
 "language": "GDScript",
-"path": "res://core/res/NodeData.gd"
+"path": "res://core/data/NodeData.gd"
 }, {
 "base": "GNode",
 "class": "OutputNode",
@@ -50,6 +55,7 @@ _global_script_class_icons={
 "GraphData": "",
 "HumanNode": "",
 "InputNode": "",
+"LivingModule": "",
 "NodeData": "",
 "OutputNode": ""
 }
@@ -63,6 +69,7 @@ config/icon="res://icon.png"
 [autoload]
 
 ECUtilities="*res://addons/easy_charts/utilities/scripts/ec_utilities.gd"
+CoreManager="*res://CoreManager.gd"
 
 [display]
 

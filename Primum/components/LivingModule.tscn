@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://core/GNode.tscn" type="PackedScene" id=1]
-[ext_resource path="res://components/Human.gd" type="Script" id=2]
+[ext_resource path="res://components/LivingModule.gd" type="Script" id=2]
 
-[node name="Human" instance=ExtResource( 1 )]
-title = "Human"
+[node name="LivingModule" instance=ExtResource( 1 )]
+margin_bottom = 241.0
+title = "LivingModule"
 slot/0/left_enabled = true
 slot/1/left_enabled = false
 slot/1/left_type = 0
 slot/1/left_color = Color( 1, 1, 1, 1 )
-slot/1/right_enabled = true
+slot/1/right_enabled = false
 slot/1/right_type = 0
 slot/1/right_color = Color( 1, 1, 1, 1 )
 slot/2/left_enabled = false
@@ -18,21 +19,34 @@ slot/2/left_color = Color( 1, 1, 1, 1 )
 slot/2/right_enabled = false
 slot/2/right_type = 0
 slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 2 )
 
 [node name="Label" parent="." index="0"]
 visible = false
 
-[node name="Oxygen" type="Label" parent="." index="1"]
+[node name="Label2" type="Label" parent="." index="1"]
 margin_left = 16.0
 margin_top = 24.0
 margin_right = 189.0
 margin_bottom = 38.0
-text = "Oxygen"
+text = "Habitant"
 
-[node name="CO2" type="Label" parent="." index="2"]
+[node name="Label3" type="Label" parent="." index="2"]
 margin_left = 16.0
 margin_top = 39.0
 margin_right = 189.0
 margin_bottom = 53.0
+text = "Oxygen"
+
+[node name="Label4" type="Label" parent="." index="3"]
+margin_left = 16.0
+margin_top = 54.0
+margin_right = 189.0
+margin_bottom = 68.0
 text = "CO2"

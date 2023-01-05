@@ -10,11 +10,13 @@ onready var graph_edit = $"GraphEdit"
 const InputNode = preload("res://components/Input.tscn")
 const OutputNode = preload("res://components/Output.tscn")
 const HumanNode = preload("res://components/Human.tscn")
+const LivingModule := preload("res://components/LivingModule.tscn")
 
 var Entities := [
 	InputNode,
 	OutputNode,
-	HumanNode
+	HumanNode,
+	LivingModule
 ]
 
 const FileToSave = "user://graph.res"
@@ -132,6 +134,8 @@ func init_graph(graph_data: GraphData):
 				gnode = OutputNode.instance()
 			"HumanNode":
 				gnode = HumanNode.instance()
+			"LivingModule":
+				gnode = LivingModule.instance()
 		
 		if gnode:
 			gnode.offset = node.offset
