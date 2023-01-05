@@ -29,7 +29,7 @@ func _ready():
 
 
 func _on_Button_pressed():
-	var tree = $"CanvasLayer/World/Tree"
+	var tree = $"UiLayer/Tree"
 	tree.set_column_title(0, "Day")
 	tree.set_column_title(1, "Oxygen Consumed")
 	var root = tree.create_item()
@@ -49,8 +49,8 @@ func _on_Button_pressed():
 
 
 func _on_Button2_pressed():
-	$"CanvasLayer".scale.x = $"CanvasLayer".scale.x + 0.1
-	$"CanvasLayer".scale.y = $"CanvasLayer".scale.y + 0.1
+	$"GameLayer".scale.x = $"GameLayer".scale.x + 0.1
+	$"GameLayer".scale.y = $"GameLayer".scale.y + 0.1
 
 
 func _on_World_gui_input(event):
@@ -68,13 +68,13 @@ func _on_Control_gui_input(event):
 		
 		if moving:
 #			e.relative
-			$"CanvasLayer/World".rect_position += e.relative
+			$"GameLayer/World".rect_position += e.relative
 		else:
 			pass
 	elif event is InputEventPanGesture:
 		var e = event as InputEventPanGesture
 		var length = e.delta.y/10
-		$"CanvasLayer".scale = $"CanvasLayer".scale+Vector2(length, length)
+		$"GameLayer".scale = $"GameLayer".scale+Vector2(length, length)
 #
 #
 #		print(e.delta)
@@ -82,4 +82,4 @@ func _on_Control_gui_input(event):
 		print(event)
 		
 func on_edit_node_name(node):
-	$"CanvasLayer2/InputDialog".popup_centered()
+	$"UiLayer/InputDialog".popup_centered()

@@ -17,37 +17,37 @@ _global_script_classes=[ {
 "base": "GraphNode",
 "class": "GNode",
 "language": "GDScript",
-"path": "res://core/GNode.gd"
+"path": "res://Graph_Based/core/GNode.gd"
 }, {
 "base": "Resource",
 "class": "GraphData",
 "language": "GDScript",
-"path": "res://core/data/GraphData.gd"
+"path": "res://Graph_Based/core/data/GraphData.gd"
 }, {
 "base": "GNode",
 "class": "HumanNode",
 "language": "GDScript",
-"path": "res://components/Human.gd"
+"path": "res://Graph_Based/components/Human.gd"
 }, {
 "base": "GNode",
 "class": "InputNode",
 "language": "GDScript",
-"path": "res://components/Input.gd"
+"path": "res://Graph_Based/components/Input.gd"
 }, {
 "base": "GraphNode",
 "class": "LivingModule",
 "language": "GDScript",
-"path": "res://components/LivingModule.gd"
+"path": "res://Graph_Based/components/LivingModule.gd"
 }, {
 "base": "Resource",
 "class": "NodeData",
 "language": "GDScript",
-"path": "res://core/data/NodeData.gd"
+"path": "res://Graph_Based/core/data/NodeData.gd"
 }, {
 "base": "GNode",
 "class": "OutputNode",
 "language": "GDScript",
-"path": "res://components/Output.gd"
+"path": "res://Graph_Based/components/Output.gd"
 } ]
 _global_script_class_icons={
 "Building": "",
@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Primum - Lunar City"
-run/main_scene="res://main_graph.tscn"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

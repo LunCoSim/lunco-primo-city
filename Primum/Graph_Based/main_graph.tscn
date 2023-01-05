@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://main_graph.gd" type="Script" id=1]
+[ext_resource path="res://Graph_Based/main_graph.gd" type="Script" id=1]
 [ext_resource path="res://dialogs/InputDialog.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Theme" id=1]

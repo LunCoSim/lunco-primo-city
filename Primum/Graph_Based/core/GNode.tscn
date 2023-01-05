@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://core/GNode.gd" type="Script" id=1]
+[ext_resource path="res://Graph_Based/core/GNode.gd" type="Script" id=1]
 
 [node name="GNode" type="GraphNode"]
 margin_right = 205.0
