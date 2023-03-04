@@ -24,15 +24,15 @@ script = ExtResource( 1 )
 visible = false
 
 [node name="Oxygen" type="Label" parent="." index="1"]
-margin_left = 16.0
-margin_top = 24.0
-margin_right = 189.0
-margin_bottom = 38.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 189.0
+offset_bottom = 38.0
 text = "Oxygen"
 
 [node name="CO2" type="Label" parent="." index="2"]
-margin_left = 16.0
-margin_top = 39.0
-margin_right = 189.0
-margin_bottom = 53.0
+offset_left = 16.0
+offset_top = 39.0
+offset_right = 189.0
+offset_bottom = 53.0
 text = "CO2"

@@ -6,202 +6,29 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Control",
-"class": "Building",
-"language": "GDScript",
-"path": "res://core/building.gd"
-}, {
-"base": "Control",
-"class": "Chart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/chart.gd"
-}, {
-"base": "Node2D",
-"class": "Chart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/chart2d.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "ColumnChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/ColumnChart/column_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "ColumnChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/ColumnChart2D/column_chart2D.gd"
-}, {
-"base": "Resource",
-"class": "DataFrame",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/data_frame.gd"
-}, {
-"base": "PanelContainer",
-"class": "DataTooltip",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/containers/data_tooltip/data_tooltip.gd"
-}, {
-"base": "GraphNode",
-"class": "GNode",
-"language": "GDScript",
-"path": "res://Graph_Based/core/GNode.gd"
-}, {
-"base": "Resource",
-"class": "GraphData",
-"language": "GDScript",
-"path": "res://Graph_Based/core/data/GraphData.gd"
-}, {
-"base": "GNode",
-"class": "HumanNode",
-"language": "GDScript",
-"path": "res://Graph_Based/components/Human.gd"
-}, {
-"base": "GNode",
-"class": "InputNode",
-"language": "GDScript",
-"path": "res://Graph_Based/components/Input.gd"
-}, {
-"base": "VBoxContainer",
-"class": "LegendElement",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/containers/legend/function_legend.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "LineChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/LineChart/line_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "LineChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/LineChart2D/line_chart2D.gd"
-}, {
-"base": "Building",
-"class": "LivingModule",
-"language": "GDScript",
-"path": "res://buildings/LivingModule.gd"
-}, {
-"base": "Resource",
-"class": "Matrix",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/matrix.gd"
-}, {
-"base": "Reference",
-"class": "MatrixGenerator",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/structures/matrix_generator.gd"
-}, {
-"base": "Resource",
-"class": "NodeData",
-"language": "GDScript",
-"path": "res://Graph_Based/core/data/NodeData.gd"
-}, {
-"base": "GNode",
-"class": "OutputNode",
-"language": "GDScript",
-"path": "res://Graph_Based/components/Output.gd"
-}, {
-"base": "Chart",
-"class": "PieChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/PieChart/pie_chart.gd"
-}, {
-"base": "Control",
-"class": "Point",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/components/point/point.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "RadarChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/RadarChart/radar_chart.gd"
-}, {
-"base": "ScatterChartBase",
-"class": "ScatterChart",
-"language": "GDScript",
-"path": "res://addons/easy_charts/control_charts/ScatterChart/scatter_chart.gd"
-}, {
-"base": "Chart2D",
-"class": "ScatterChart2D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/2d_charts/ScatterChart2D/scatter_chart2D.gd"
-}, {
-"base": "Spatial",
-"class": "ScatterChart3D",
-"language": "GDScript",
-"path": "res://addons/easy_charts/3d_charts/ScatterChart3D/scatter_chart3D.gd"
-}, {
-"base": "Chart",
-"class": "ScatterChartBase",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/classes/base/scatter_chart_base.gd"
-}, {
-"base": "Reference",
-"class": "Slice",
-"language": "GDScript",
-"path": "res://addons/easy_charts/utilities/components/slice/slice.gd"
-}, {
-"base": "Building",
-"class": "SpacePort",
-"language": "GDScript",
-"path": "res://buildings/SpacePort.gd"
-} ]
-_global_script_class_icons={
-"Building": "",
-"Chart": "",
-"Chart2D": "",
-"ColumnChart": "",
-"ColumnChart2D": "",
-"DataFrame": "",
-"DataTooltip": "",
-"GNode": "",
-"GraphData": "",
-"HumanNode": "",
-"InputNode": "",
-"LegendElement": "",
-"LineChart": "",
-"LineChart2D": "",
-"LivingModule": "",
-"Matrix": "",
-"MatrixGenerator": "",
-"NodeData": "",
-"OutputNode": "",
-"PieChart": "",
-"Point": "",
-"RadarChart": "",
-"ScatterChart": "",
-"ScatterChart2D": "",
-"ScatterChart3D": "",
-"ScatterChartBase": "",
-"Slice": "",
-"SpacePort": ""
-}
+config_version=5
 
 [application]
 
-config/name="Primum - Lunar City"
+config/name="Primo - Lunar City"
 run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
 
-ECUtilities="*res://addons/easy_charts/utilities/scripts/ec_utilities.gd"
 CoreManager="*res://CoreManager.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/dpi/allow_hidpi=true
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PackedStringArray()
 
 [gui]
 
@@ -213,7 +40,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"

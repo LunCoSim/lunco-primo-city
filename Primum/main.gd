@@ -5,13 +5,13 @@ extends Node
 # var a = 2
 # var b = "text"
 
-export var Population := 10_000
+@export var Population := 10_000
 
-export var Steps := 4000
-export var StepSizeDays := 1 
+@export var Steps := 4000
+@export var StepSizeDays := 1 
 
 #https://www.cnet.com/science/breathe-deep-how-the-iss-keeps-astronauts-alive/
-export var OxygenConsumption = 0.84 #kg/person/day
+@export var OxygenConsumption = 0.84 #kg/person/day
 
 var paused = true
 
@@ -72,7 +72,7 @@ func _on_Control_gui_input(event):
 		
 		if moving:
 #			e.relative
-			$"GameLayer/World".rect_position += e.relative
+			$"GameLayer/World".position += e.relative
 		else:
 			pass
 	elif event is InputEventPanGesture:

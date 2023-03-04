@@ -5,12 +5,12 @@ extends Node
 # var a = 2
 # var b = "text"
 
-onready var graph_edit = $"GraphEdit"
+@onready var graph_edit = $"GraphEdit"
 
-const InputNode = preload("res://components/Input.tscn")
-const OutputNode = preload("res://components/Output.tscn")
-const HumanNode = preload("res://components/Human.tscn")
-const LivingModule := preload("res://components/LivingModule.tscn")
+const InputNode = preload("./components/Input.tscn")
+const OutputNode = preload("./components/Output.tscn")
+const HumanNode = preload("./components/Human.tscn")
+const LivingModule := preload("./components/LivingModule.tscn")
 
 var Entities := [
 	InputNode,
@@ -39,7 +39,7 @@ func _ready():
 		btn.text = e.resource_path
 		
 		facilities.add_child(btn)
-		btn.connect("pressed", self, "add_node", [e])
+		btn.connect("pressed",Callable(self,"add_node").bind(e))
 		
 	
 
@@ -52,9 +52,9 @@ func _process(delta):
 #---------------
 
 func add_node(node_class):
-	var node = node_class.instance()
+	var node = node_class.instantiate()
 	
-	node.connect("edit_node_name", self, "_on_edit_node_name")
+	node.connect("edit_node_name",Callable(self,"_on_edit_node_name"))
 	
 	graph_edit.add_child(node)
 
@@ -129,13 +129,13 @@ func init_graph(graph_data: GraphData):
 		
 		match node.type:
 			"InputNode":
-				gnode = InputNode.instance()
+				gnode = InputNode.instantiate()
 			"OutputNode":
-				gnode = OutputNode.instance()
+				gnode = OutputNode.instantiate()
 			"HumanNode":
-				gnode = HumanNode.instance()
+				gnode = HumanNode.instantiate()
 			"LivingModule":
-				gnode = LivingModule.instance()
+				gnode = LivingModule.instantiate()
 		
 		if gnode:
 			gnode.offset = node.offset

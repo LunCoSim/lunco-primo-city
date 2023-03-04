@@ -4,7 +4,7 @@
 [ext_resource path="res://Graph_Based/core/GNode.tscn" type="PackedScene" id=2]
 
 [node name="LivingModule" instance=ExtResource( 2 )]
-margin_bottom = 241.0
+offset_bottom = 241.0
 title = "LivingModule"
 slot/0/left_enabled = true
 slot/1/left_enabled = false
@@ -31,22 +31,22 @@ script = ExtResource( 1 )
 visible = false
 
 [node name="Label2" type="Label" parent="." index="1"]
-margin_left = 16.0
-margin_top = 24.0
-margin_right = 189.0
-margin_bottom = 38.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 189.0
+offset_bottom = 38.0
 text = "Habitant"
 
 [node name="Label3" type="Label" parent="." index="2"]
-margin_left = 16.0
-margin_top = 39.0
-margin_right = 189.0
-margin_bottom = 53.0
+offset_left = 16.0
+offset_top = 39.0
+offset_right = 189.0
+offset_bottom = 53.0
 text = "Oxygen"
 
 [node name="Label4" type="Label" parent="." index="3"]
-margin_left = 16.0
-margin_top = 54.0
-margin_right = 189.0
-margin_bottom = 68.0
+offset_left = 16.0
+offset_top = 54.0
+offset_right = 189.0
+offset_bottom = 68.0
 text = "CO2"

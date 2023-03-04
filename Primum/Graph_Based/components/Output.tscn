@@ -4,13 +4,13 @@
 [ext_resource path="res://Graph_Based/components/Output.gd" type="Script" id=2]
 
 [node name="Output" instance=ExtResource( 1 )]
-margin_left = 436.0
-margin_top = 185.0
-margin_right = 714.0
-margin_bottom = 401.0
+offset_left = 436.0
+offset_top = 185.0
+offset_right = 714.0
+offset_bottom = 401.0
 mouse_filter = 1
 slot/0/left_enabled = true
 script = ExtResource( 2 )
 
 [node name="Label" parent="." index="0"]
-margin_right = 262.0
+offset_right = 262.0

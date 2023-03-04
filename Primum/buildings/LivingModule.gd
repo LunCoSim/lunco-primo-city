@@ -1,4 +1,4 @@
-tool
+@tool
 extends Building
 class_name LivingModule
 
@@ -10,6 +10,7 @@ class_name LivingModule
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	type = "LivingModule"
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
