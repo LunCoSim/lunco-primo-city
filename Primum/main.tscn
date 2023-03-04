@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1"]
 [ext_resource type="PackedScene" path="res://buildings/SpacePort.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://core/building.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dp5d6tl1aqvlg" path="res://core/building.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cve7fkv6l64uf" path="res://dialogs/InputDialog.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://buildings/LivingModule.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://osjypfddjgxv" path="res://buildings/LivingModule.tscn" id="5"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1")
@@ -34,6 +34,7 @@ offset_right = 40.5
 offset_bottom = 59.0
 
 [node name="SpacePort" parent="GameLayer/World" instance=ExtResource("2")]
+layout_mode = 0
 anchors_preset = 0
 offset_left = 163.5
 offset_top = 301.5
@@ -41,6 +42,7 @@ offset_right = 163.5
 offset_bottom = 301.5
 
 [node name="LivingModule" parent="GameLayer/World" instance=ExtResource("5")]
+layout_mode = 0
 anchors_preset = 0
 offset_left = 321.0
 offset_top = 45.0
